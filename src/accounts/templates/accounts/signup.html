@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}signup{% endblock title %}
+
+{% block content %}
+<div class="continer">
+ <h1>Connexion</h1>
+ <form method ="POST">
+    {% csrf_token %}
+    <p> 
+        <Label for="username"><p>Nom d'utilisateur</P></Label>
+        <input id="username" type="text" name="username">
+    </p>
+    <p>
+        <label for="password">Mot de passe</label></p>
+        <input id="password" type="password" name="password">
+    </p>
+    <button type="button" class="btn" type="submit">Se connecter</button>
+    <div class = brand>
+        <p><button type="button" class="btn style1" type="submit">Crée un compte</button></P>
+    </div>
+</div>
+        <style>
+            h1{
+                padding-top: 50px;
+            }
+            .continer{
+                text-align: center;
+                width: 350px;
+                height: 500px;
+                background: black;
+                border: 1px solid black;                
+            }
+            .btn{
+                margin-top: 30px;
+                background-color: blue;
+                color: white;
+                border: 1px solid black;
+            }    
+            .style1{
+                background-color: #cacacc5f;
+                color: white;               
+            }  
+            .brand{
+                margin-top: 20px;
+            }
+        </style>
+</form>
+</div>
+
+{% endblock %}
