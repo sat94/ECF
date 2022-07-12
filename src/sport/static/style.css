@@ -7,7 +7,6 @@
   box-sizing: border-box;
   
 }
-
 body{
     color: beige;
     background-image: url(couverture.jpg) ; 
@@ -17,9 +16,10 @@ body{
 }
 
 a.navbar-brand{
-  color: white!important;
+  color: rgb(126, 68, 68)!important;
   font-size: 35px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: italic;
 }
 .navbar .nav-item .nav-link,
 .dropdown-menu .dropdown-item {
@@ -41,7 +41,7 @@ a.navbar-brand{
     background: black;
     padding-left: 16px;
     padding-right: 16px;
-    border-bottom: 1px solid #d6d6d6;
+    border-bottom: 2px solid #fefefe;
     
   }
   .nav-link img {
@@ -52,8 +52,9 @@ a.navbar-brand{
     float: left;
     margin-right: 10px;
   }
-
 .top{
-  margin-top: 260px;
+  margin-top: 260px; 
 }
-
+.droite{
+  margin-right: 300px!important;  
+}

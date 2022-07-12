@@ -1,32 +1,33 @@
 {% extends 'base.html' %}
 
-{% block title %}Signup{% endblock title %}
+{% block title %}login{% endblock title %}
 
 {% block content %}
 <div class="continer">
-    <h1>Inscription</h1>
-    <form method ="POST" action="{% url 'index' %}">
-        {% csrf_token %}
-        <p class=topa>         
-            {{ form.as_p }}            
-        </p>  
-        <button class="btn" type="submit">S'inscrire</button>    
-    </form>
+ <h1>Connexion</h1>
+ <form method ="POST">
+    {% csrf_token %}
+    <p> 
+        <Label for="username"><p>Nom d'utilisateur</P></Label>
+        <input id="username" type="text" name="username">
+    </p>
+    <p>
+        <label for="password">Mot de passe</label></p>
+        <input id="password" type="password" name="password">
+    </p>
+    <button class="btn" type="submit">Se connecter</button>
+    <div class = brand>
+        <p><a class="btn style1" href="{% url 'inscription' %}">Crée un compte</a></P>
+    </div>
 </div>
-      <style>
-            .top{
-                margin-top: 120px;               
-              }
-            .topa{
-                margin-top: 50px;
-            }      
+        <style>
             h1{
-                padding-top: 20px;
+                padding-top: 50px;
             }
             .continer{
                 text-align: center;
-                width: 450px;
-                height: auto;
+                width: 350px;
+                height: 500px;
                 background: black;
                 border: 1px solid black;                
             }
@@ -35,7 +36,6 @@
                 background-color: blue;
                 color: white;
                 border: 1px solid black;
-                margin-bottom: 30px;
             }    
             .style1{
                 background-color: #cacacc5f;
