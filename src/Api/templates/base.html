@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-{% load static%}
-{% url 'index' as index %}
-{% url 'recherche' as recherche %}
-{% url 'signup' as signup %}
-{% url user.username  as user.username %}
-
 {% block head %}
 <html lang=fr>
 <head>         
@@ -29,7 +22,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">         
                 <ul class="navbar-nav text-center ms-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link {% if request.path == index %} active {% endif %} me-lg-5" href="{% url 'index' %}">Accueil</a></li>   
-                    <li class="nav-item"><a class="nav-link {% if request.path == recherche %} active {% endif %} me-0 me-lg-5" href="{% url 'recherche' %}">Partenaire</a></li> 
+                    <li class="nav-item"><a class="nav-link {% if request.path == recherche %} active {% endif %} me-0 me-lg-5" href="#">Partenaire</a></li> 
                     <li class="nav-item"><a class="nav-link {% if request.path == salle %} active {% endif %} me-0 me-lg-5" href="#">Salle</a></li>
                     {% if user.is_authenticated %}
                     <li class="nav-item dropdown me-0 me-lg-5">
@@ -42,7 +35,7 @@
                         </ul>    
                         <li class="nav-item"><a class="nav-link {% if request.path == salle %} active {% endif %} me-0 me-lg-5" href="#">Salle</a></li>                   
                     {% else %}
-                        <li class="nav-item"><a class="nav-link {% if request.path == signup %} active {% endif %} me-0 me-lg-5" href="{% url 'login' %}">Connection</a></li>
+                        <li class="nav-item"><a class="nav-link {% if request.path == signup %} active {% endif %} me-0 me-lg-5" href="{% url 'login' %}">connection</a></li>
                     {% endif %}
                     
                 </ul>            
@@ -55,4 +48,3 @@
     </div>
 {% block footer%}{% endblock footer %}
 </body>
-

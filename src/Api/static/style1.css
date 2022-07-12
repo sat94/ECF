@@ -1,0 +1,17 @@
+body{
+    color: beige;
+    background-image: url(couverture.jpg) ; 
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;   
+}
+
+h1{
+    font-family: Playfair Display;
+    transform-style: preserve-3d;
+    display: inline-flex;
+    margin-top: 100px;
+    letter-spacing: 10px;
+    font-size: 120px;
+    font-style: italic
+} 
